@@ -3,7 +3,7 @@
  * @Autor: warren xu
  * @Date: 2024-12-25 15:39:43
  * @LastEditors: warren xu
- * @LastEditTime: 2025-02-05 14:06:50
+ * @LastEditTime: 2025-02-05 16:57:14
  */
 
 #include "timer_server.h"
@@ -64,6 +64,7 @@ static uint8_t add_timer(TIMER_INSTANCE* new_timer){
                 }
                 current->next = new_timer;
             }
+            new_timer->next = NULL;
             add_success = 1;
         }
     }
